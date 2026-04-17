@@ -1,3 +1,5 @@
+import TextOnPath from './textOnPath.jsx'
+
 function FirstPageContainer() {
     return <div className="h-screen w-screen">
         <div>
@@ -15,6 +17,9 @@ function FirstPageContainer() {
         </div>
         <div className="h-screen w-screen flex items-center justify-center">
             <p className=" font-[MelodramaLight] text-[188px] leading-[1.2em]">TETIANA RUSETSKA</p>
+        </div>
+        <div>
+            <TextOnPath />
         </div>
     </div>
 }

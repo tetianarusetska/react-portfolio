@@ -22,7 +22,7 @@ export default function TextOnPath() {
             style={{
                 width: "100%",
                 height: "110px",
-                transform: "translateY(-180px)",
+                transform: "translateY(-280px)",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",

@@ -4,7 +4,7 @@ import TextDisperseLines from '../containers/textDisperse.jsx'
 
 
 function SecondPageContainer() {
-    return <div className="h-screen w-screen px-[80px] border-2">
+    return <div className="h-screen w-screen px-[80px]">
         <div className="flex flex-row gap-[60px]">
             <div className="flex flex-col mt-[80px] flex-1">
                 <div className="flex flex-col gap-[43px]">
