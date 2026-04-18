@@ -46,7 +46,7 @@ export default function SelectedWorks4({
         { title: "Yehor Lemzyakoff", category: "Figma" },
         { title: "Portfolio", category: "Framer" },
         { title: "abc Buchhandlung", category: "HTML, CSS, JS" },
-        { title: "Project 4", category: "React" },
+        { title: "Project 4", category: "React, Tailwind" },
     ],
     fontSize = 32,
 }) {
@@ -54,7 +54,7 @@ export default function SelectedWorks4({
         <div
             style={{
                 fontSize,
-                fontWeight: 500,
+                fontWeight: 400,
                 width: "100%",
                 color: "#fff",
                 fontFamily: "Montserrat, sans-serif",
