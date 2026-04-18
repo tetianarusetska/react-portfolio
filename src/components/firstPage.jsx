@@ -4,7 +4,7 @@ function FirstPage() {
     return <div className="h-screen w-screen">
         <div className="menu">
             <nav>
-                <ul className="list-none flex flex-row gap-35 leading-[1.2em] mt-5 ml-[80px] font-[MelodramaLight] text-[38px]">
+                <ul className="list-none flex flex-row gap-35 leading-[1.2em] mt-5 ml-[160px] font-[MelodramaLight] text-[38px]">
                     <li><a href="#">über mich</a></li>
                     <li><a href="#">projekte</a></li>
                     <li><a href="#">kontakt</a></li>
