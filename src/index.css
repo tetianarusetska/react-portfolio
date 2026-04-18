@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @font-face {
@@ -17,6 +15,13 @@
   src: url('./assets/fonts/ABC_Maxi/ABC_Maxi_Sharp/ABCMaxiSharp-Light-Trial.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'Boxing';
+  src: url('./assets/fonts/Boxing_Complete/Fonts/WEB/fonts/Boxing-Regular.woff2') format('woff2');
+}
+
+@import "tailwindcss";
+
 :root {
   --backgroundColor: black;
   --mainColor: white;
@@ -25,4 +30,11 @@
 body {
   background-color: var(--backgroundColor);
   color: var(--mainColor);
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+.cursor {
+    animation: blink 0.7s step-end infinite;
 }

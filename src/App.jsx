@@ -1,11 +1,15 @@
-import FirstPageContainer from './containers/firstPageCont.jsx'
-import SecondPageContainer from './containers/secPageCont.jsx'
+import FirstPage from './components/firstPage.jsx'
+import SecondPage from './components/secPage.jsx'
+import ThirdPage from './components/thirdPage.jsx'
+import FourthPage from './components/fourthPage.jsx'
 
 function App() {
   return (
     <>
-    <FirstPageContainer />
-    <SecondPageContainer />
+    <FirstPage />
+    <SecondPage />
+    <ThirdPage />
+    <FourthPage />
     </>
   )
 }
