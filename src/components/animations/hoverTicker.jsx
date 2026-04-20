@@ -8,7 +8,6 @@ export default function HoverTicker({
     const controls = useAnimation()
     const tickerRef = React.useRef(null)
 
-    // Запускаем бесконечную анимацию
     const loopAnimation = () => {
         controls.start({
             x: ["0%", "-100%"],
@@ -16,13 +15,12 @@ export default function HoverTicker({
                 x: {
                     repeat: Infinity,
                     ease: "linear",
-                    duration: speed, // скорость прокрутки
+                    duration: speed, 
                 },
             },
         })
     }
 
-    // Запускаем анимацию при монтировании
     React.useEffect(() => {
         loopAnimation()
     }, [])
@@ -38,8 +36,8 @@ export default function HoverTicker({
                 fontSize: "32px",
                 color: "#fff",
             }}
-            onMouseEnter={() => controls.stop()} // остановка при наведении
-            onMouseLeave={() => loopAnimation()} // возобновление при уходе мыши
+            onMouseEnter={() => controls.stop()} 
+            onMouseLeave={() => loopAnimation()} 
         >
             <motion.div
                 ref={tickerRef}
@@ -49,7 +47,7 @@ export default function HoverTicker({
                     whiteSpace: "nowrap",
                 }}
             >
-                {text} {text} {/* дублируем для бесконечного эффекта */}
+                {text} {text} 
             </motion.div>
         </div>
     )
