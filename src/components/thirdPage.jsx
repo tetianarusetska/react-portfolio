@@ -1,5 +1,5 @@
 import img2 from '../assets/images/rectangle.svg'
-// import Typewriter from '../components/animations/typeWriter.jsx'
+import Typewriter from '../components/animations/typeWriter.jsx'
 
 function ThirdPage() {
     return <div className="h-screen w-screen">
@@ -8,7 +8,7 @@ function ThirdPage() {
         </div>
         <div className="content flex flex-row">
             <div className="animation flex-1 ml-[160px] mt-[120px]">
-                {/* <Typewriter /> */}
+                <Typewriter />
             </div>
             <div className="itInfo flex-1 flex flex-col gap-[10px] mt-[170px]">
                 <p className="leading-[1.2em] font-[Monserrat, sans-serif] font-extralight text-[24px]">Kurs "Frontend-Entwciklung", ucode, 2020-2021</p>
