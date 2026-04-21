@@ -32,9 +32,14 @@ body {
   color: var(--mainColor);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @keyframes blink {
     50% { opacity: 0; }
 }
 .cursor {
     animation: blink 0.7s step-end infinite;
 }
+
