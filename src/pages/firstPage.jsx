@@ -1,4 +1,4 @@
-import TextOnPath from './animations/textOnPath.jsx'
+import TextOnPath from '../components/animations/textOnPath.jsx'
 
 function FirstPage() {
     return <div className="h-screen w-screen">

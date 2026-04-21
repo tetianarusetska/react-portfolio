@@ -1,5 +1,5 @@
-import TextOnPath from './animations/textOnPath2.jsx'
-import Form from './form.jsx'
+import TextOnPath from '../components/animations/textOnPath2.jsx'
+import Form from '../components/form.jsx'
 
 function FifthPage() {
     return <div className='h-screen w-screen '>

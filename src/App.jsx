@@ -1,19 +1,10 @@
-import FirstPage from './components/firstPage.jsx'
-import SecondPage from './components/secPage.jsx'
-import ThirdPage from './components/thirdPage.jsx'
-import FourthPage from './components/fourthPage.jsx'
-import FifthPage from './components/fifthPage.jsx'
+import { Routes, Route } from "react-router-dom"
+import Home from "./pages/home.jsx"
 
-function App() {
+export default function App() {
   return (
-    <>
-    <FirstPage />
-    <SecondPage />
-    <ThirdPage />
-    <FourthPage />
-    <FifthPage />
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+  );
 }
-
-export default App

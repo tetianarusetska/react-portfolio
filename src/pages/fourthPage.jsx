@@ -1,5 +1,5 @@
-import HoverTicker from './animations/hoverTicker.jsx'
-import SelectedWorks4 from './animations/selectedWorks.jsx'
+import HoverTicker from '../components/animations/hoverTicker.jsx'
+import SelectedWorks4 from '../components/animations/selectedWorks.jsx'
 
 function FourthPage () {
     return <div>

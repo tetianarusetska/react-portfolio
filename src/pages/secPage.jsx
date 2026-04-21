@@ -1,5 +1,5 @@
 import img1 from "../assets/images/1.png"
-import TextDisperseLines from './animations/textDisperse.jsx'
+import TextDisperseLines from '../components/animations/textDisperse.jsx'
 
 function SecondPage () {
     return <div className="h-screen w-screen px-[80px]">
