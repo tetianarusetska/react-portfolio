@@ -2,7 +2,7 @@ import TextOnPath from '../components/animations/textOnPath2.jsx'
 import Form from '../components/form.jsx'
 
 function FifthPage() {
-    return <div id="contact" className='h-screen w-screen '>
+    return <div className='h-screen w-screen '>
         <div className="flex flex-row">
             <div className="flex-1">
                 <Form />

@@ -32,9 +32,6 @@ body {
   color: var(--mainColor);
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 @keyframes blink {
     50% { opacity: 0; }
