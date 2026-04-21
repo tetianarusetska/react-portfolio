@@ -2,7 +2,7 @@ import TextOnPath from '../components/animations/textOnPath.jsx'
 import Menu from '../components/menu.jsx'
 
 function FirstPage() {
-    return <div className="h-screen w-screen">
+    return <div id="home" className="h-screen w-screen">
         <div className="menu">
             <Menu />
         </div>
