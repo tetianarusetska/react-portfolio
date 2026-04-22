@@ -1,5 +1,4 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
 import Home from "./pages/home.jsx";
 
 export default function Router() {
