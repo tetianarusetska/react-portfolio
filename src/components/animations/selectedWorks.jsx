@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { motion, useMotionValue, useSpring } from "framer-motion"
+import { Link, useLocation } from "react-router-dom"
 
-function WorkRow({ index, title, category }) {
+function WorkRow({ index, title, category, link }) {
     const x = useMotionValue(0)
     const y = useMotionValue(0)
 
@@ -21,35 +22,54 @@ function WorkRow({ index, title, category }) {
     }
 
     return (
-        <motion.div
-            onMouseMove={onMouseMove}
-            onMouseLeave={onMouseLeave}
-            style={{
-                display: "grid",
-                gridTemplateColumns: "60px 1fr auto",
-                alignItems: "center",
-                padding: "24px 0",
-                cursor: "pointer",
-                x: smoothX,
-                y: smoothY,
-            }}
-        >
-            <span style={{ opacity: 0.5 }}>{index}</span>
-            <span>{title}</span>
-            <span style={{ opacity: 0.5 }}>{category}</span>
-        </motion.div>
+        <Link to={link} style={{ textDecoration: "none", color: "inherit" }}>
+            <motion.div
+                onMouseMove={onMouseMove}
+                onMouseLeave={onMouseLeave}
+                style={{
+                    display: "grid",
+                    gridTemplateColumns: "60px 1fr auto",
+                    alignItems: "center",
+                    padding: "24px 0",
+                    cursor: "pointer",
+                    x: smoothX,
+                    y: smoothY,
+                }}
+            >
+                <span style={{ opacity: 0.5 }}>{index}</span>
+                <span>{title}</span>
+                <span style={{ opacity: 0.5 }}>{category}</span>
+            </motion.div>
+        </Link>
     )
 }
 
 export default function SelectedWorks4({
     works = [
-        { title: "Yehor Lemzyakoff", category: "Figma" },
-        { title: "Portfolio", category: "Framer" },
-        { title: "abc Buchhandlung", category: "HTML, CSS, JS" },
-        { title: "Project 4", category: "React, Tailwind" },
+        { title: "Yehor Lemzyakoff", category: "Figma", link: "/project1" },
+        { title: "Portfolio", category: "Framer", link: "/project2" },
+        { title: "abc Buchhandlung", category: "HTML, CSS, JS", link: "/project3" },
+        { title: "Project 4", category: "React, Tailwind", link: "/project4" },
     ],
     fontSize = 32,
 }) {
+    const location = useLocation()
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            const container = document.querySelector("#app-scroll")
+
+            if (container) {
+                container.scrollTop = 0
+            }
+
+            window.scrollTo(0, 0)
+            document.documentElement.scrollTop = 0
+        }, 0)
+
+        return () => clearTimeout(timeout)
+    }, [location.pathname])
+
     return (
         <div
             style={{
@@ -60,20 +80,13 @@ export default function SelectedWorks4({
                 fontFamily: "Montserrat, sans-serif",
             }}
         >
-            <div
-                style={{
-                    marginBottom: 32,
-                    opacity: 0.6,
-                    fontSize: fontSize * 0.7,
-                }}
-            />
-
             {works.map((work, i) => (
                 <React.Fragment key={i}>
                     <WorkRow
                         index={(i + 1).toString().padStart(2, "0")}
                         title={work.title}
                         category={work.category}
+                        link={work.link}
                     />
 
                     {i < works.length - 1 && (

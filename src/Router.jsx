@@ -5,6 +5,7 @@ import Datenschutz from "./pages/footerPages/datenschutz.jsx"
 import Contact from "./pages/footerPages/contact.jsx"
 import Project1 from './pages/projects/project1.jsx'
 import Project2 from './pages/projects/project2.jsx'
+import Project3 from './pages/projects/project3.jsx'
 
 export default function Router() {
 
@@ -19,6 +20,7 @@ export default function Router() {
 
       <Route path="/project1" element={<Project1 />} />
       <Route path="/project2" element={<Project2 />} />
+      <Route path="/project3" element={<Project3 />} />
 
     </Routes>
   );
