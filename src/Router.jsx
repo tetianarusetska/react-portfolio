@@ -4,12 +4,13 @@ import Impressum from "./pages/footerPages/impressum.jsx"
 import Datenschutz from "./pages/footerPages/datenschutz.jsx"
 import Contact from "./pages/footerPages/contact.jsx"
 import Project1 from './pages/projects/project1.jsx'
+import Project2 from './pages/projects/project2.jsx'
 
 export default function Router() {
 
   return (
     <Routes>
-      
+
       <Route path="/" element={<Home />} />
 
       <Route path="/impressum" element={<Impressum />} />
@@ -17,6 +18,7 @@ export default function Router() {
       <Route path="/contact" element={<Contact />} />
 
       <Route path="/project1" element={<Project1 />} />
+      <Route path="/project2" element={<Project2 />} />
 
     </Routes>
   );
