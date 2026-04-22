@@ -12,7 +12,8 @@ function Form () {
             <label className="leading-[1.2em] font-[Montserrat, sans-serif] font-extralight text-[32px]">Brief</label>
             <input type="text" className="border-1 h-[100px] w-[450px] leading-[1.2em] font-[Montserrat, sans-serif] font-extralight text-[20px]"></input>
         </div>
+        <button className="w-[96px] h-[31px] text-center text-black bg-white leading-[1.2em] font-[Montserrat, sans-serif] font-extralight text-[20px]">Submit</button>
     </div>
-}
+}     
 
 export default Form

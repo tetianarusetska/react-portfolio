@@ -1,8 +1,11 @@
 import img1 from "../assets/images/1.png"
 import TextDisperseLines from '../components/animations/textDisperse.jsx'
+import DownloadButton from '../components/button.jsx'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faSquareFacebook, faSquareLinkedin, faWhatsapp, faTelegram, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
-function SecondPage () {
-    return <div className="h-screen w-screen px-[80px]"> 
+function SecondPage() {
+    return <div className="h-screen w-screen px-[80px]">
         <div className="flex flex-row gap-[60px]">
             <div className="flex flex-col mt-[80px] flex-1">
                 <div className="aboutMe flex flex-col gap-[43px]">
@@ -14,15 +17,35 @@ function SecondPage () {
                     </div>
                 </div>
                 <div className="downlButton">
-                    <button>Lebenslauf</button>
+                    <DownloadButton />
                 </div>
                 <div className="links">
-                    <ul>
-                        <li><a href="https://www.facebook.com/p/Tata-Rusetskaya-100014756447608/"></a></li>
-                        <li><a href="https://www.linkedin.com/in/tata-rusetskaya-5bb2b41b6/"></a></li>
-                        <li><a href="https://wa.me/qr/NVB7GQ5QYMQVJ1"></a></li>
-                        <li><a href="t.me/tata_rusetskaya"></a></li>
-                        <li><a href="https://www.instagram.com/tata_rusetskaya/"></a></li>
+                    <ul className="flex flex-row gap-[6px] mt-[63px]">
+                        <li>
+                            <a href="https://www.facebook.com/p/Tata-Rusetskaya-100014756447608">
+                                <FontAwesomeIcon icon={faSquareFacebook} className="text-white text-4xl" />
+                            </a>
+                        </li>                        
+                        <li>
+                            <a href="https://www.linkedin.com/in/tata-rusetskaya-5bb2b41b6/">
+                                <FontAwesomeIcon icon={faSquareLinkedin} className="text-white text-4xl" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/qr/NVB7GQ5QYMQVJ1">
+                                <FontAwesomeIcon icon={faWhatsapp} className="text-white text-4xl" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="t.me/tata_rusetskaya">
+                                <FontAwesomeIcon icon={faTelegram} className="text-white text-4xl" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/tata_rusetskaya/">
+                                <FontAwesomeIcon icon={faInstagram} className="text-white text-4xl" />
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -32,12 +55,12 @@ function SecondPage () {
                 </div>
                 <div className="additInfo flex flex-row gap-[81px]">
                     <div>
-                        <p className="leading-[1.2em] font-[MelodramaLight] text-[32px]">SPRACHE:</p>
-                        <p className="leading-[1.2em] font-[Montserrat, sans-serif] text-[20px] font-extralight mt-[10px]">Deutsch, Englisch,<br></br>Ukrainisch,<br></br>Russisch</p>
+                        <p className="leading-[1.2em] font-[MelodramaLight] text-[38px]">SPRACHE:</p>
+                        <p className="leading-[1.2em] font-[Montserrat, sans-serif] text-[25px] font-extralight mt-[10px]">Deutsch, Englisch,<br></br>Ukrainisch,<br></br>Russisch</p>
                     </div>
                     <div>
-                        <p className="leading-[1.2em] font-[MelodramaLight] text-[32px]">HOBBY:</p>
-                        <p className="leading-[1.2em] font-[Montserrat, sans-serif] text-[20px] font-extralight mt-[10px]">Analoge Fotografie</p>
+                        <p className="leading-[1.2em] font-[MelodramaLight] text-[38px]">HOBBY:</p>
+                        <p className="leading-[1.2em] font-[Montserrat, sans-serif] text-[25px] font-extralight mt-[10px]">Analoge Fotografie</p>
                     </div>
                 </div>
             </div>
