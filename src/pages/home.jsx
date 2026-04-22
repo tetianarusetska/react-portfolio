@@ -7,11 +7,11 @@ import FifthPage from './fifthPage.jsx'
 function Home() {
   return (
     <>
-      <div id="home"><FirstPage /></div>
-      <div id="aboutme"><SecondPage /></div>
+      <FirstPage />
+      <SecondPage />
       <ThirdPage />
-      <div id="projects"><FourthPage /></div>
-      <div id="contact"><FifthPage /></div>
+      <FourthPage />
+      <FifthPage />
     </>
   )
 }

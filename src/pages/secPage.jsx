@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSquareFacebook, faSquareLinkedin, faWhatsapp, faTelegram, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
 function SecondPage() {
-    return <div className="h-screen w-screen px-[80px]">
+    return <div id="aboutme" className="h-screen w-screen px-[80px]">
         <div className="flex flex-row gap-[60px]">
             <div className="flex flex-col mt-[80px] flex-1">
                 <div className="aboutMe flex flex-col gap-[43px]">
