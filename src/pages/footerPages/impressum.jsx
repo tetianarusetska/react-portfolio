@@ -1,7 +1,8 @@
 export default function Impressum() {
     return <div className="impressum">
-        <p className="text-center leading-[1.2em] font-[Montserrat, sans-serif] text-[32px] font-extralight mt-[80px]">IMPRESSUM</p>
-        <div className="my-[20px] mx-[120px] flex flex-col gap-[20px] w-[776px] leading-[1.2em] font-[Montserrat, sans-serif] text-[20px] font-extralight mt-[80px]">
+        <a href="/" className="inline-block mt-[30px] mx-[120px] text-[25px] font-extralight">Home</a>
+        <p className="text-center leading-[1.2em] font-[Montserrat, sans-serif] text-[32px] font-extralight mt-[60px]">IMPRESSUM</p>
+        <div className="my-[80px] mx-[120px] flex flex-col gap-[20px] w-[776px] leading-[1.2em] font-[Montserrat, sans-serif] text-[20px] font-extralight">
             <p>Angaben gemäß § 5 TMG</p>
             <p>Name:<br></br>Tetiana Rusetska</p>
             <p>Adresse:<br></br>Birkholzweg 38<br></br>60433 Frankfurt am Main<br></br>Deutschland</p>
