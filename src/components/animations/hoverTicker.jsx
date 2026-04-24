@@ -5,23 +5,23 @@ export default function HoverTicker({
     text = "HTML, CSS, JavaScript, TypeScript, React, Angular, Node.js, Vue.js",
     speed = 20,
 }) {
-    const controls = useAnimation()
-    const tickerRef = React.useRef(null)
+    const controls = useAnimation() // hier wird einen Obj erstellt -> um Animation manuell steuern
+    const tickerRef = React.useRef(null) // Referenz für HTML-El. Man kann direkt auf das El zugreifen
 
     const loopAnimation = () => {
-        controls.start({
-            x: ["0%", "-100%"],
+        controls.start({ // Animation startet 
+            x: ["0%", "-100%"], // der Text bewegt sich von 0% bis 100%
             transition: {
                 x: {
-                    repeat: Infinity,
-                    ease: "linear",
+                    repeat: Infinity, //unendlich wiederholen
+                    ease: "linear", // gleichmäßig Bewegung
                     duration: speed, 
                 },
             },
         })
     }
 
-    React.useEffect(() => {
+    React.useEffect(() => { // beim Laden startet Animation automatisch
         loopAnimation()
     }, [])
 
@@ -36,12 +36,12 @@ export default function HoverTicker({
                 fontSize: "32px",
                 color: "#fff",
             }}
-            onMouseEnter={() => controls.stop()} 
+            onMouseEnter={() => controls.stop()}  
             onMouseLeave={() => loopAnimation()} 
         >
-            <motion.div
-                ref={tickerRef}
-                animate={controls}
+            <motion.div // ein normales div, aber mit Animation von Framer Motion
+                ref={tickerRef} // um mit El später arbeiten
+                animate={controls} // das El bekommt seine Animation
                 style={{
                     display: "inline-block",
                     whiteSpace: "nowrap",

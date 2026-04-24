@@ -1,20 +1,20 @@
 import * as React from "react"
 
 export default function TextOnPath() {
-    const offsetRef = React.useRef(0)
+    const offsetRef = React.useRef(0)                            // ein Wert gespeichert, wo der Text auf der Linie starte
 
-    React.useEffect(() => {
-        const interval = setInterval(() => {
-            offsetRef.current += 0.2
-            if (offsetRef.current > 100) offsetRef.current = 0
+    React.useEffect(() => {                                      // dieser Code startet nur einmal beim Laden
+        const interval = setInterval(() => {                     // alle 16 Sek wird etwas aktuallisiert. Dadurch wirkt Animation flüssig
+            offsetRef.current += 0.2                             // der Startounkt vom text wird ständig erhöht. Also bewegt sich Text weiter
+            if (offsetRef.current > 100) offsetRef.current = 0   // wenn der Wert 100% erreciht -> startet die Animation weiter von vorne
 
-            const el = document.getElementById("textPath")
+            const el = document.getElementById("textPath")      
             if (el) {
-                el.setAttribute("startOffset", offsetRef.current + "%")
+                el.setAttribute("startOffset", offsetRef.current + "%") // verschiebt den Text auf dem Pfad. Dadurch läuft der Text entlang die Linie
             }
         }, 16)
 
-        return () => clearInterval(interval)
+        return () => clearInterval(interval)                      // wenn die Komponent verschwindet -> Timer wird gestoppt
     }, [])
 
     return (
@@ -39,7 +39,7 @@ export default function TextOnPath() {
                 <path
                     id="tetianaWave"
                     d="
-                        M 0 250
+                        M 0 250 
                         C 300 60, 600 440, 1000 250
                         C 1300 60, 1600 440, 2000 250
                     "

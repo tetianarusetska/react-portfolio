@@ -2,7 +2,7 @@ import * as React from "react"
 import { motion } from "framer-motion"
 
 const transforms = [
-    { x: -0.8, y: -0.6, r: -29 },
+    { x: -0.8, y: -0.6, r: -29 }, // hier sind verschiedene Bewegungspositionen gespeichert
     { x: -0.2, y: -0.4, r: -6 },
     { x: -0.05, y: 0.1, r: 12 },
     { x: -0.05, y: -0.1, r: -9 },
@@ -15,7 +15,7 @@ const transforms = [
     { x: 0.8, y: 0.6, r: 20 },
 ]
 
-const container = {
+const container = { // hier wird gesteuert, wie die Buchstaben nacheinander animiert werden
     open: {
         transition: {
             staggerChildren: 0.03,
@@ -29,7 +29,7 @@ const container = {
     },
 }
 
-const letter = {
+const letter = { // wenn Hover aktiv ist, jede Buchstabe bekommt Pos aus transforms
     open: (i) => {
         const t = transforms[i % transforms.length]
         return {
@@ -38,14 +38,14 @@ const letter = {
             rotate: t.r,
         }
     },
-    closed: {
+    closed: { // alle Buchstaben kommen zurück an ihren normalen Platz
         x: "0em",
         y: "0em",
         rotate: 0,
     },
 }
 
-export default function TextDisperseLines({
+export default function TextDisperseLines({ 
     text = `TETIANA RUSETSKA
 FRANKFURT AM MAIN
 +49 151 21268773
@@ -54,9 +54,9 @@ rusetskatata@gmail.com`,
     color = "#ffffff",
     lineHeight = 1.2,
 }) {
-    const [activeLine, setActiveLine] = React.useState(null)
+    const [activeLine, setActiveLine] = React.useState(null) // hier wird gespeichert welche Zeile mit der Maus aktiv ist 
 
-    const lines = (text || "").split("\n")
+    const lines = (text || "").split("\n") // Text wird in mehrere Zeilen getrennt
 
     return (
         <div
@@ -68,12 +68,12 @@ rusetskatata@gmail.com`,
                 fontFamily: "sans-serif",
             }}
         >
-            {lines.map((line, lineIndex) => (
+            {lines.map((line, lineIndex) => ( // alle Zeile werden einzeln dargestellt
                 <motion.div
                     key={lineIndex}
                     variants={container}
                     animate={activeLine === lineIndex ? "open" : "closed"}
-                    onMouseEnter={() => setActiveLine(lineIndex)}
+                    onMouseEnter={() => setActiveLine(lineIndex)} // Zeile werden aktiv/inaktiv
                     onMouseLeave={() => setActiveLine(null)}
                     style={{
                         display: "block",
@@ -81,7 +81,7 @@ rusetskatata@gmail.com`,
                         cursor: "pointer",
                     }}
                 >
-                    {line.split("").map((char, i) => (
+                    {line.split("").map((char, i) => ( // die Zeile wird in einzelne Buchstaben geteilt. Dann jede Buchstabe bekommt seine Animation
                         <motion.span
                             key={i}
                             custom={i}
@@ -94,7 +94,7 @@ rusetskatata@gmail.com`,
                             }}
                             style={{ display: "inline-block" }}
                         >
-                            {char === " " ? "\u00A0" : char}
+                            {char === " " ? "\u00A0" : char} 
                         </motion.span>
                     ))}
                 </motion.div>

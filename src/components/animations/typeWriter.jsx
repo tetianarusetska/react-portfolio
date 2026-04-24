@@ -15,9 +15,9 @@ export default function Typewriter({
     deletingSpeed = 65,
     pauseDuration = 900,
 }) {
-    const spanRefs = useRef({})
+    const spanRefs = useRef({}) // hier werden Referenzen für jedes Wort gespeichert. Damit kann man später direkt den Text ändern
 
-    useEffect(() => {
+    useEffect(() => {            
         const cursors = document.querySelectorAll(".tw-cursor")
         let show = true
         const blink = setInterval(() => {
@@ -27,9 +27,9 @@ export default function Typewriter({
         return () => clearInterval(blink)
     }, [])
 
-    useEffect(() => {
+    useEffect(() => {          // hier startet die Animation
         items
-            .filter((i) => i.animated)
+            .filter((i) => i.animated) // nur Worte mit animated: true werden animiert
             .forEach((item, idx) => {
                 const el = spanRefs.current[item.text]
                 if (!el) return
@@ -38,11 +38,11 @@ export default function Typewriter({
                 let dir = 1
 
                 const loop = () => {
-                    el.textContent = item.text.slice(0, i)
-                    if (dir === 1) {
+                    el.textContent = item.text.slice(0, i) // zeigt nur einen Teil des Wortes
+                    if (dir === 1) { //schreiben
                         i++
                         if (i > item.text.length) {
-                            dir = -1
+                            dir = -1 // löschen
                             setTimeout(loop, pauseDuration)
                             return
                         }
@@ -58,7 +58,7 @@ export default function Typewriter({
                     setTimeout(loop, dir === 1 ? typingSpeed : deletingSpeed)
                 }
 
-                setTimeout(loop, idx * 400)
+                setTimeout(loop, idx * 400) // jedes Wort startet etwas später. Dadurch laufen nicht alle gleichzeitig
             })
     }, [])
 
@@ -79,7 +79,7 @@ export default function Typewriter({
                 gap: "10px",
             }}
         >
-            {items.map((item) => (
+            {items.map((item) => ( // alle Worte werden untereinander angezeigt
                 <div
                     key={item.text}
                     style={{
