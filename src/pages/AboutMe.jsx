@@ -1,11 +1,11 @@
 import img1 from "../assets/images/1.png"
-import TextDisperseLines from '../components/animations/textDisperse.jsx'
-import DownloadButton from '../components/button.jsx'
+import TextDisperseLines from '../components/animations/TextDisperse.jsx'
+import DownloadButton from '../components/Button.jsx'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSquareFacebook, faSquareLinkedin, faWhatsapp, faTelegram, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
 function SecondPage() {
-    return <div id="aboutme" className="h-screen w-screen px-[80px]">
+    return <div id="aboutme" className="min-h-screen min-w-screen px-[80px]">
         <div className="flex flex-row gap-[60px]">
             <div className="flex flex-col mt-[80px] flex-1">
                 <div className="aboutMe flex flex-col gap-[43px]">

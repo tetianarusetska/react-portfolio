@@ -32,8 +32,8 @@ body {
   color: var(--mainColor);
 }
 
-html, body {
-  scroll-behavior: auto !important;
+html {
+  scroll-behavior: smooth;
 }
 
 @keyframes blink {

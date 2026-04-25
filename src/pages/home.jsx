@@ -1,8 +1,8 @@
-import FirstPage from './firstPage.jsx'
-import SecondPage from './secPage.jsx'
-import ThirdPage from './thirdPage.jsx'
-import FourthPage from './fourthPage.jsx'
-import FifthPage from './fifthPage.jsx'
+import FirstPage from './Hero.jsx'
+import SecondPage from './AboutMe.jsx'
+import ThirdPage from './ITPath.jsx'
+import FourthPage from './Projects.jsx'
+import FifthPage from './Contact.jsx'
 
 function Home() {
   return (

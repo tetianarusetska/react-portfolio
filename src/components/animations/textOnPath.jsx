@@ -5,7 +5,7 @@ export default function TextOnPath() {
 
     React.useEffect(() => {                                      // dieser Code startet nur einmal beim Laden
         const interval = setInterval(() => {                     // alle 16 Sek wird etwas aktuallisiert. Dadurch wirkt Animation flüssig
-            offsetRef.current += 0.2                             // der Startounkt vom text wird ständig erhöht. Also bewegt sich Text weiter
+            offsetRef.current += 0.2                             // der Startpunkt vom text wird ständig erhöht. Also bewegt sich Text weiter
             if (offsetRef.current > 100) offsetRef.current = 0   // wenn der Wert 100% erreciht -> startet die Animation weiter von vorne
 
             const el = document.getElementById("textPath")      

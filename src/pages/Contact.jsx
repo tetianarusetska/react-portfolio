@@ -1,9 +1,9 @@
-import TextOnPath from '../components/animations/textOnPath2.jsx'
-import Form from '../components/form.jsx'
-import Footer from '../components/footer.jsx'
+import TextOnPath from '../components/animations/TextOnPath2.jsx'
+import Form from '../components/Form.jsx'
+import Footer from '../components/Footer.jsx'
 
 function FifthPage() {
-    return <div id='home-contact' className='h-screen w-screen '>
+    return <div id='contact' className='h-screen w-screen '>
         <div className="flex flex-row">
             <div className="flex-1">
                 <Form />

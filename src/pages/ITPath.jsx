@@ -1,5 +1,5 @@
 import img2 from '../assets/images/rectangle.svg'
-import Typewriter from '../components/animations/typeWriter.jsx'
+import Typewriter from '../components/animations/TypeWriter.jsx'
 
 function ThirdPage() {
     return <div className="h-screen w-screen">
