@@ -1,6 +1,7 @@
 import img1 from "../assets/images/1.png"
 import TextDisperseLines from '../components/animations/TextDisperse.jsx'
 import DownloadButton from '../components/Button.jsx'
+// import TextAbout from '../components/TextAbout.jsx'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSquareFacebook, faSquareLinkedin, faWhatsapp, faTelegram, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
@@ -13,7 +14,8 @@ function SecondPage() {
                         <p className="leading-[1.2em] font-[MelodramaLight] text-[72px]">ÜBER MICH</p>
                     </div>
                     <div>
-                        <img src={img1} alt="image" className="w-[469px] h-[266px]" />
+                        {/* <img src={img1} alt="image" className="w-[469px] h-[266px]" /> */}
+                        {/* <TextAbout /> */}
                     </div>
                 </div>
                 <div className="downlButton">

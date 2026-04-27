@@ -1,4 +1,4 @@
-export default function Contact() {
+export default function FooterContact() {
     return <div className="contact">
         <a href="/" className="inline-block mt-[30px] mx-[260px] text-[25px] font-extralight">Home</a>
         <p className="text-center leading-[1.2em] font-[Montserrat, sans-serif] text-[32px] font-extralight mt-[80px]">KONTAKT</p>
