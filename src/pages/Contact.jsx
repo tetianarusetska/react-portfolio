@@ -2,7 +2,7 @@ import TextOnPath from '../components/animations/TextOnPath2.jsx'
 import Form from '../components/Form.jsx'
 import Footer from '../components/Footer.jsx'
 
-function FifthPage() {
+function Contact() {
     return <div id='contact' className='h-screen w-screen '>
         <div className="flex flex-row">
             <div className="flex-1">
@@ -32,4 +32,4 @@ function FifthPage() {
     </div>
 }
 
-export default FifthPage 
+export default Contact 

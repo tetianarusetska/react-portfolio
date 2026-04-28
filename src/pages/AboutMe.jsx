@@ -5,7 +5,7 @@ import DownloadButton from '../components/Button.jsx'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSquareFacebook, faSquareLinkedin, faWhatsapp, faTelegram, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
-function SecondPage() {
+function AboutMe() {
     return <div id="aboutme" className="min-h-screen min-w-screen px-[80px]">
         <div className="flex flex-row gap-[60px]">
             <div className="flex flex-col mt-[80px] flex-1">
@@ -14,7 +14,7 @@ function SecondPage() {
                         <p className="leading-[1.2em] font-[MelodramaLight] text-[72px]">ÜBER MICH</p>
                     </div>
                     <div>
-                        {/* <img src={img1} alt="image" className="w-[469px] h-[266px]" /> */}
+                        <img src={img1} alt="image" className="w-[469px] h-[266px]" />
                         {/* <TextAbout /> */}
                     </div>
                 </div>
@@ -70,4 +70,4 @@ function SecondPage() {
     </div>
 }
 
-export default SecondPage
+export default AboutMe

@@ -1,7 +1,7 @@
 import HoverTicker from '../components/animations/HoverTicker.jsx'
 import SelectedWorks4 from '../components/animations/SelectedWorks.jsx'
 
-function FourthPage () {
+function Projects () {
     return <div id='projects'>
         <div>
             <p className="text-center leading-[1.2em] font-[MelodramaLight] text-[72px]">MEINE PROJEKTE</p>
@@ -15,4 +15,4 @@ function FourthPage () {
     </div>
 }
 
-export default FourthPage
+export default Projects

@@ -10,16 +10,15 @@ import Project3 from './pages/projects/Project3.jsx'
 import Impressum from "./pages/footer-pages/Impressum.jsx"
 import Datenschutz from "./pages/footer-pages/Datenschutz.jsx"
 import FooterContact from "./pages/footer-pages/FooterContact.jsx"
-
-
-
 import ScrollToHash from "./components/ScrollToHash.jsx"
+import ScrollToTop from "./components/ScrollToTop.jsx"
 
 
 export default function Router() {
 
   return (
     <>
+      <ScrollToTop />
       <ScrollToHash />
 
       <Routes>

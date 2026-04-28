@@ -1,17 +1,17 @@
-import FirstPage from './Hero.jsx'
-import SecondPage from './AboutMe.jsx'
-import ThirdPage from './ITPath.jsx'
-import FourthPage from './Projects.jsx'
-import FifthPage from './Contact.jsx'
+import Hero from './Hero.jsx'
+import AboutMe from './AboutMe.jsx'
+import ITPath from './ITPath.jsx'
+import Projects from './Projects.jsx'
+import Contact from './Contact.jsx'
 
 function Home() {
   return (
     <>
-      <FirstPage />
-      <SecondPage />
-      <ThirdPage />
-      <FourthPage />
-      <FifthPage />
+      <Hero />
+      <AboutMe />
+      <ITPath />
+      <Projects />
+      <Contact />
     </>
   )
 }

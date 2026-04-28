@@ -1,7 +1,7 @@
 import TextOnPath from '../components/animations/TextOnPath.jsx'
 import Menu from '../components/Menu.jsx'
 
-function FirstPage() {
+function Hero() {
     return <div className="h-screen w-screen">
         <div className="menu">
             <Menu />
@@ -19,4 +19,4 @@ function FirstPage() {
     </div>
 }
 
-export default FirstPage
+export default Hero

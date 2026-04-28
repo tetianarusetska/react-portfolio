@@ -9,9 +9,9 @@ export default function Menu() {
     ]
 
     return <div className="menu">
-        <nav className="list-none flex flex-row gap-35 leading-[1.2em] mt-5 ml-[160px] font-[MelodramaLight] text-[38px]">
-            {links.map((link) => (
-                <Link to={link.target}>
+        <nav className="flex flex-row gap-35 leading-[1.2em] mt-5 ml-[160px] font-[MelodramaLight] text-[38px]">
+            {links.map((link, index) => (
+                <Link key={index} to={link.target}>
                     {link.displayName}
                 </Link>
             ))}
