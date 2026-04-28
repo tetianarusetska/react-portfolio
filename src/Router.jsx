@@ -1,15 +1,17 @@
 import { Routes, Route } from "react-router-dom"
 
 import Home from "./pages/Home.jsx"
-import Impressum from "./pages/footer-pages/Impressum.jsx"
-import Datenschutz from "./pages/footer-pages/Datenschutz.jsx"
-import FooterContact from "./pages/footer-pages/FooterContact.jsx"
-import Project1 from './pages/projects/Project1.jsx'
-import Project2 from './pages/projects/Project2.jsx'
-import Project3 from './pages/projects/Project3.jsx'
 import AboutMe from "./pages/AboutMe.jsx"
 import Projects from "./pages/Projects.jsx"
 import Contact from "./pages/Contact.jsx"
+import Project1 from './pages/projects/Project1.jsx'
+import Project2 from './pages/projects/Project2.jsx'
+import Project3 from './pages/projects/Project3.jsx'
+import Impressum from "./pages/footer-pages/Impressum.jsx"
+import Datenschutz from "./pages/footer-pages/Datenschutz.jsx"
+import FooterContact from "./pages/footer-pages/FooterContact.jsx"
+
+
 
 import ScrollToHash from "./components/ScrollToHash.jsx"
 
