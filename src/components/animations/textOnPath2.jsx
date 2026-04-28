@@ -26,6 +26,7 @@ export default function TextOnPath() {
                 width="100%"
                 height="500"
                 viewBox="0 0 2000 500"
+                className="pointer-events-none absolute"
             >
 
                 <path
