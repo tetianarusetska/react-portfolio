@@ -64,37 +64,12 @@ export default function Typewriter({
 
     return (
         <div
-            style={{
-                width: 370,
-                height: 413,
-                boxSizing: "border-box",
-                overflow: "hidden",
-                background: "white",
-                backgroundImage:
-                    "linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)",
-                backgroundSize: "30px 30px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                gap: "10px",
-            }}
+            className="w-[370px] h-[413px] box-border overflow-hidden bg-white flex flex-col justify-center gap-[10px] bg-[linear-gradient(#000_1px,transparent_1px),linear-gradient(90deg,#000_1px,transparent_1px)] bg-[length:30px_30px]"
         >
             {items.map((item) => ( // alle Worte werden untereinander angezeigt
                 <div
                     key={item.text}
-                    style={{
-                        fontFamily: "Boxing",
-                        fontSize: 42,
-                        lineHeight: 1.08,
-                        fontWeight: 500,
-                        color: "#C70505",
-                        lineHeight: 1.1,
-                        letterSpacing: "0.04em",
-                        textTransform: "uppercase",
-                        minHeight: "1.15em",
-                        display: "flex",
-                        alignItems: "center",
-                    }}
+                    className="font-['Boxing'] text-[42px] leading-[1.1] font-medium text-[#C70505] tracking-[0.04em] uppercase min-h-[1.15em] flex items-center"
                 >
                     <span
                         ref={(el) => {
@@ -106,16 +81,7 @@ export default function Typewriter({
 
                     {item.animated && (
                         <span
-                            className="tw-cursor"
-                            style={{
-                                display: "inline-block",
-                                width: 4,
-                                height: "0.75em",
-                                background: "#C70505",
-                                marginLeft: 4,
-                                verticalAlign: "middle",
-                                flexShrink: 0,
-                            }}
+                            className="tw-cursor inline-block w-1 h-[0.75em] bg-[#C70505] ml-1 align-middle shrink-0"
                         />
                     )}
                 </div>

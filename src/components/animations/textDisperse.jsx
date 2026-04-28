@@ -45,7 +45,7 @@ const letter = { // wenn Hover aktiv ist, jede Buchstabe bekommt Pos aus transfo
     },
 }
 
-export default function TextDisperseLines({ 
+export default function TextDisperseLines({
     text = `TETIANA RUSETSKA
 FRANKFURT AM MAIN
 +49 151 21268773
@@ -60,13 +60,8 @@ rusetskatata@gmail.com`,
 
     return (
         <div
-            style={{
-                fontSize,
-                lineHeight,
-                color,
-                whiteSpace: "pre-line",
-                fontFamily: "sans-serif",
-            }}
+            className="whitespace-pre-line font-sans"
+            style={{ fontSize, lineHeight, color }}
         >
             {lines.map((line, lineIndex) => ( // alle Zeile werden einzeln dargestellt
                 <motion.div
@@ -75,11 +70,7 @@ rusetskatata@gmail.com`,
                     animate={activeLine === lineIndex ? "open" : "closed"}
                     onMouseEnter={() => setActiveLine(lineIndex)} // Zeile werden aktiv/inaktiv
                     onMouseLeave={() => setActiveLine(null)}
-                    style={{
-                        display: "block",
-                        fontFamily: "ABC",
-                        cursor: "pointer",
-                    }}
+                    className="block cursor-pointer font-[ABC]"
                 >
                     {line.split("").map((char, i) => ( // die Zeile wird in einzelne Buchstaben geteilt. Dann jede Buchstabe bekommt seine Animation
                         <motion.span
@@ -92,9 +83,9 @@ rusetskatata@gmail.com`,
                                 duration: 0.6,
                                 ease: [0.33, 1, 0.68, 1],
                             }}
-                            style={{ display: "inline-block" }}
+                            className="inline-block"
                         >
-                            {char === " " ? "\u00A0" : char} 
+                            {char === " " ? "\u00A0" : char}
                         </motion.span>
                     ))}
                 </motion.div>

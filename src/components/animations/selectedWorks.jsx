@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom" // aktuelle URL erkennen
 
 function WorkRow({ index, title, category, link }) { // erstellt eine einzelne Zeile in der Projektliste
     const x = useMotionValue(0) //hier werden x,y Werte gespeichert. Diese Werte verändern die Pos der Zeile
-    const y = useMotionValue(0) 
+    const y = useMotionValue(0)
 
     const smoothX = useSpring(x, { stiffness: 120, damping: 20 }) // statt harter Bewegung wird eine sanfte Federbewegung benutzt
     const smoothY = useSpring(y, { stiffness: 120, damping: 20 })
@@ -26,19 +26,12 @@ function WorkRow({ index, title, category, link }) { // erstellt eine einzelne Z
             <motion.div // das ist die sichtbare Zeile mit Animationen
                 onMouseMove={onMouseMove}
                 onMouseLeave={onMouseLeave}
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "60px 1fr auto",
-                    alignItems: "center",
-                    padding: "24px 0",
-                    cursor: "pointer",
-                    x: smoothX,
-                    y: smoothY,
-                }}
+                className="grid grid-cols-[60px_1fr_auto] items-center py-6 cursor-pointer"
+                style={{ x: smoothX, y: smoothY }}
             >
-                <span style={{ opacity: 0.5 }}>{index}</span>
+                <span className="opacity-50">{index}</span>
                 <span>{title}</span>
-                <span style={{ opacity: 0.5 }}>{category}</span>
+                <span className="opacity-50">{category}</span>
             </motion.div>
         </Link>
     )
@@ -72,13 +65,8 @@ export default function SelectedWorks4({
 
     return (
         <div
-            style={{
-                fontSize,
-                fontWeight: 400,
-                width: "100%",
-                color: "#fff",
-                fontFamily: "Montserrat, sans-serif",
-            }}
+            className="w-full text-white font-normal font-[Montserrat]"
+            style={{ fontSize }}
         >
             {works.map((work, i) => ( // alle Proj werden automatisch angezeigt
                 <React.Fragment key={i}>
@@ -91,11 +79,7 @@ export default function SelectedWorks4({
 
                     {i < works.length - 1 && (
                         <div
-                            style={{
-                                height: 1,
-                                backgroundColor: "rgba(255,255,255,0.2)",
-                                margin: "0 0 0 60px",
-                            }}
+                            className="h-px bg-white/20 ml-[60px]"
                         />
                     )}
                 </React.Fragment>

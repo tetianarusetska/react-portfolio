@@ -19,15 +19,7 @@ export default function TextOnPath() {
 
     return (
         <div
-            style={{
-                width: "100%",
-                height: "110px",
-                transform: "translateY(-280px)",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                overflow: "visible",
-            }}
+            className="w-full h-[110px] -translate-y-[280px] flex justify-center items-center overflow-visible"
         >
 
             <svg

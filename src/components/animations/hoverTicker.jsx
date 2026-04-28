@@ -27,25 +27,14 @@ export default function HoverTicker({
 
     return (
         <div
-            style={{
-                overflow: "hidden",
-                width: "100%",
-                whiteSpace: "nowrap",
-                cursor: "pointer",
-                fontFamily: "Boxing",
-                fontSize: "32px",
-                color: "#fff",
-            }}
+            className="overflow-hidden w-full whitespace-nowrap cursor-pointer font-['Boxing'] text-[32px] text-white"
             onMouseEnter={() => controls.stop()}  
             onMouseLeave={() => loopAnimation()} 
         >
             <motion.div // ein normales div, aber mit Animation von Framer Motion
                 ref={tickerRef} // um mit El später arbeiten
                 animate={controls} // das El bekommt seine Animation
-                style={{
-                    display: "inline-block",
-                    whiteSpace: "nowrap",
-                }}
+                className="inline-block whitespace-nowrap"
             >
                 {text} {text} 
             </motion.div>
